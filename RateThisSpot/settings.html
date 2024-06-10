@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate This Spot - Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>Settings</header>
+    <div class="container">
+        <div class="form-group">
+            <label for="theme-toggle">Light Mode / Dark Mode</label>
+            <input type="checkbox" id="theme-toggle">
+        </div>
+        <div class="form-group">
+            <label for="text-size">Text Size:</label>
+            <input type="radio" id="text-small" name="text-size" value="small"> Small
+            <input type="radio" id="text-medium" name="text-size" value="medium" checked> Medium
+            <input type="radio" id="text-large" name="text-size" value="large"> Large
+        </div>
+        <div class="form-group">
+            <label for="notifications-toggle">Enable Notifications</label>
+            <input type="checkbox" id="notifications-toggle">
+        </div>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
