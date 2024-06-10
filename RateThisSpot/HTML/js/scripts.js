@@ -1,5 +1,10 @@
 // script.js
 
+// Function to get current hash value
+function getHash() {
+    return window.location.hash.substring(1);
+}
+
 // Function to load saved locations from localStorage and display them on the home screen
 function loadLocations() {
     const locations = JSON.parse(localStorage.getItem('locations')) || [];
@@ -158,3 +163,48 @@ function takePhoto() {
         console.error('Error accessing camera: ', err);
     });
 }
+
+// Handle Take a Photo button click
+document.getElementById('take-photo').addEventListener('click', function() {
+    if (isMobileDevice()) {
+        const takePhotoInput = document.createElement('input');
+        takePhotoInput.type = 'file';
+        takePhotoInput.accept = 'image/*';
+        takePhotoInput.capture = 'camera';
+        takePhotoInput.click();
+    } else {
+        alert('Not Supported');
+    }
+});
+
+function isMobileDevice() {
+    return /Mobi/i.test(window.navigator.userAgent) || /Android/i.test(window.navigator.userAgent);}
+
+
+
+// Placeholder for camera functionality
+function takePhoto() {
+    // Implement camera functionality here
+    alert('Placeholder for camera functionality');
+}
+
+// Add event listener to form submission
+document.getElementById('addLocationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Place added successfully!');
+});
+
+// Toggle dropdown menu on menu icon click
+document.querySelector('.menu-icon span').addEventListener('click', function() {
+    document.querySelector('.menu-icon .dropdown-menu').classList.toggle('show');
+});
+
+// Add star rating functionality
+const stars = document.querySelectorAll('.star-rating span');
+stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+        stars.forEach((s, i) => {
+            s.innerHTML = i <= index ? '&#9733;' : '&#9734;';
+        });
+    });
+});

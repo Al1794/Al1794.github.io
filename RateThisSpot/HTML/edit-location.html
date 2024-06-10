@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Location - Rate This Spot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Rate This Spot</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-location.html">Add Location</a></li>
+                <li><a href="detailed-view.html">Detailed View</a></li>
+                <li><a href="edit-location.html">Edit Location</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <span>&#9776;</span>
+            <ul class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-location.html">Add Location</a></li>
+                <li><a href="detailed-view.html">Detailed View</a></li>
+                <li><a href="edit-location.html">Edit Location</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <h1>Edit Location</h1>
+            <form id="edit-location-form">
+                <div class="form-group">
+                    <label for="location-name">Location Name</label>
+                    <input type="text" id="location-name" name="location-name" placeholder="Location name" required>
+                </div>
+                <div class="form-group">
+                    <label for="short-description">Short Description</label>
+                    <input type="text" id="short-description" name="short-description" placeholder="Short description" required>
+                </div>
+                <div class="form-group">
+                    <label for="detailed-review">Detailed Review</label>
+                    <textarea id="detailed-review" name="detailed-review" placeholder="Detailed review" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <div class="star-rating">
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+

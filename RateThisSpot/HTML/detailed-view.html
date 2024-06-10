@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed View - Rate This Spot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Rate This Spot</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-location.html">Add Location</a></li>
+                <li><a href="detailed-view.html">Detailed View</a></li>
+                <li><a href="edit-location.html">Edit Location</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">
+            <span>&#9776;</span>
+            <ul class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add-location.html">Add Location</a></li>
+                <li><a href="detailed-view.html">Detailed View</a></li>
+                <li><a href="edit-location.html">Edit Location</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="detailed-view-container">
+            <h1>Location Name</h1>
+            <img src="path/to/image.jpg" alt="Location Image" class="location-image">
+            <p class="review-text">Full review text here...</p>
+            <div class="star-rating">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </div>
+            <button onclick="window.location.href='edit-location.html'">Edit</button>
+            <button onclick="window.history.back()">Back</button>
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
