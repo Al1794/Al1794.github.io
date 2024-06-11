@@ -22,8 +22,7 @@ header {
     font-weight: bold;
     color: aqua;
 }
-
-nav .nav-links {
+@media (max-width: 768px){nav .nav-links {
     display: flex;
     list-style: none;
 }
@@ -41,6 +40,8 @@ nav .nav-links a {
 nav .nav-links a:hover {
     color: #5c4caf;
 }
+}
+
 
 .menu-icon {
     position: relative;
@@ -97,7 +98,7 @@ nav .nav-links a:hover {
     padding: 20px;
 }
 
-.form-group {
+@media (max-width: 600px){.form-group {
     margin-bottom: 15px;
 }
 
@@ -357,4 +358,5 @@ img {
 .form-group input[type="checkbox"],
 .form-group input[type="radio"] {
     flex-shrink: 0;
+}
 }
