@@ -408,3 +408,10 @@ img {
 #theme-toggle .icon {
     font-size: 18px;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex; /* Show menu icon on smaller screens */
+    }
+}
