@@ -17,11 +17,26 @@ header {
     color: #FFFFFF;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color: #333;
+}
+
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: aqua;
 }
+
+nav {
+    position: relative;
+}
+
+
 @media (max-width: 768px){nav .nav-links {
     display: flex;
     list-style: none;
@@ -30,6 +45,12 @@ header {
 nav .nav-links li {
     margin-left: 20px;
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
 
 nav .nav-links a {
     color: #FFFFFF;
@@ -66,6 +87,22 @@ nav .nav-links a:hover {
 .menu-icon:hover .dropdown-menu {
     display: block;
 }
+
+nav.active .nav-links {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+nav.active .nav-links li {
+    margin: 10px 0;
+}
+
 
 .dropdown-menu li {
     padding: 10px 0;
@@ -359,4 +396,4 @@ img {
 .form-group input[type="radio"] {
     flex-shrink: 0;
 }
-}
+}}
