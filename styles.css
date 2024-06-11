@@ -358,3 +358,53 @@ img {
 .form-group input[type="radio"] {
     flex-shrink: 0;
 }
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --link-color: #4CAF50;
+    --btn-bg-color: #4CAF50;
+    --btn-text-color: #fff;
+}
+
+.light-mode {
+    --bg-color: #fff;
+    --text-color: #000;
+    --link-color: #4CAF50;
+    --btn-bg-color: #4CAF50;
+    --btn-text-color: #fff;}
+
+    /* Settings styles */
+.settings-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 8px;
+}
+
+.setting-item {
+    margin-bottom: 15px;
+}
+
+.setting-item label {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.setting-item input[type="radio"],
+.setting-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#theme-toggle {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#theme-toggle .icon {
+    font-size: 18px;
+}

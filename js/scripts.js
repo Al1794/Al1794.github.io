@@ -209,3 +209,39 @@ stars.forEach((star, index) => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+    const themeToggle = document.getElementById('theme-toggle');
+    const textSizeRadios = document.querySelectorAll('input[name="text-size"]');
+    const notificationsToggle = document.getElementById('notifications-toggle');
+
+    menuIcon.addEventListener('click', function () {
+        nav.classList.toggle('active');
+    });
+
+    // Theme toggle
+    themeToggle.addEventListener('click', function () {
+        document.body.classList.toggle('light-mode');
+        const icon = themeToggle.querySelector('.icon');
+        icon.textContent = icon.textContent === '🌞' ? '🌜' : '🌞';
+    });
+
+    // Text size adjustment
+    textSizeRadios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            document.body.classList.remove('small-text', 'medium-text', 'large-text');
+            document.body.classList.add(`${this.value}-text`);
+        });
+    });
+
+    // Notifications toggle
+    notificationsToggle.addEventListener('change', function () {
+        const message = window.matchMedia("(max-width: 768px)").matches
+            ? 'Notifications Enabled'
+            : 'Desktop Notifications Enabled';
+        alert(message);
+    });
+});
+
+
